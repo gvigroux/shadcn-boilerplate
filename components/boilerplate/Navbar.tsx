@@ -1,6 +1,6 @@
-import { ModeToggle } from "@/components/boilerplate/ModeToggle";
+import { ModeToggle } from "@/components/boilerplate/mode-toggle";
 import { SheetMenu } from "@/components/boilerplate/SheetMenu";
-import { UserNav } from "@/components/boilerplate/UserNav";
+import { UserNav } from "@/components/boilerplate/user-nav";
 
 interface NavbarProps {
   title: string;
