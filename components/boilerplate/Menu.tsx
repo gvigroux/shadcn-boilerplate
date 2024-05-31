@@ -1,8 +1,8 @@
 "use client";
 
 import { Ellipsis, LogOut } from "lucide-react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link } from "@/lib/i18n";
+import { usePathname } from "@/lib/i18n";
 
 import { CollapseMenuButton } from "@/components/boilerplate/CollapseMenuButton";
 import { Button } from "@/components/ui/button";

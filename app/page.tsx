@@ -12,9 +12,18 @@ import { Services } from "@/components/boilerplate/landing/services";
 import { Sponsors } from "@/components/boilerplate/landing/sponsors";
 import { Team } from "@/components/boilerplate/landing/team";
 import { Testimonials } from "@/components/boilerplate/landing/testimonial";
+import * as m from "@/paraglide/messages.js";
+import type { Metadata } from "next";
 import LandingLayout from "./landingLayout";
 
-export default function Home() {
+export function generateMetadata(): Metadata {
+  return {
+    title: m.title(),
+    description: m.landing_description(),
+  };
+}
+
+export default async function Home() {
   return (
     <LandingLayout>
       <Hero />

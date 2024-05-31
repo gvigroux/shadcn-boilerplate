@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronDown, Dot, LucideIcon } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/lib/i18n";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";

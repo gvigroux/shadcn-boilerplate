@@ -14,9 +14,10 @@ import {
 import { useState } from "react";
 
 import { buttonVariants } from "@/components/ui/button";
+import { Link } from "@/lib/i18n";
+import * as m from "@/paraglide/messages.js";
 import { Menu } from "lucide-react";
 import { useSession } from "next-auth/react";
-import Link from "next/link";
 import { ModeToggle } from "../mode-toggle";
 import { ThemeImage } from "../theme-image";
 import { UserNav } from "../user-nav";
@@ -67,7 +68,7 @@ export const Navbar = () => {
                 alt="logo"
                 className="hidden mr-2"
               />
-              ShadcnUI/React
+              {m.title()}
             </a>
           </NavigationMenuItem>
 
@@ -86,7 +87,7 @@ export const Navbar = () => {
               <SheetContent side={"left"}>
                 <SheetHeader>
                   <SheetTitle className="font-bold text-xl">
-                    Shadcn/React
+                    {m.title()}
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">

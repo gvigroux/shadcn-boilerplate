@@ -1,0 +1,10 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "title": "Cookie Consent",
+  "landing_description": "landing_description",
+
+  "about": "About",
+  "home": "Home",
+  "about_path": "/about",
+  "hello": "Hello {name}!"
+}

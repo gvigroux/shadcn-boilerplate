@@ -1,6 +1,7 @@
-import Link from "next/link";
+import { Link } from "@/lib/i18n";
+import * as m from "@/paraglide/messages.js";
 
-import { ContentLayout } from "@/components/boilerplate/ContentLayout";
+import { ContentLayout } from "@/components/boilerplate/contentLayout";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -13,7 +14,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function DashboardPage() {
   return (
-    <ContentLayout title="Dashboard">
+    <ContentLayout title={m.title()}>
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>

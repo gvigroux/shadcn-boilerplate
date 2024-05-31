@@ -50,7 +50,8 @@
     "uuid": "^9.0.1",
     "vaul": "^0.9.1",
     "zod": "^3.23.8",
-    "zustand": "^4.5.2"
+    "zustand": "^4.5.2",
+    "@inlang/paraglide-next": "0.3.0"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -62,6 +63,7 @@
     "postcss": "^8",
     "prisma": "^5.14.0",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "@inlang/paraglide-js": "1.9.1"
   }
 }

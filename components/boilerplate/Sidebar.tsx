@@ -1,5 +1,5 @@
+import { Link } from "@/lib/i18n";
 import { PanelsTopLeft } from "lucide-react";
-import Link from "next/link";
 
 import { Menu } from "@/components/boilerplate/Menu";
 import { SidebarToggle } from "@/components/boilerplate/SidebarToggle";
@@ -8,7 +8,11 @@ import { useSidebarToggle } from "@/hooks/use-sidebar-toggle";
 import { useStore } from "@/hooks/use-store";
 import { cn } from "@/lib/utils";
 
-export function Sidebar() {
+interface SidebarProps {
+  title: string;
+}
+
+export function Sidebar({ title }: SidebarProps) {
   const sidebar = useStore(useSidebarToggle, (state) => state);
 
   return (
@@ -38,7 +42,7 @@ export function Sidebar() {
                   : "translate-x-0 opacity-100"
               )}
             >
-              Brand
+              {title}
             </h1>
           </Link>
         </Button>

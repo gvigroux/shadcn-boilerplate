@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Link from "next/link";
+import { Link } from "@/lib/i18n";
 import { Button } from "../ui/button";
 import { Social } from "./social";
 

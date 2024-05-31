@@ -1,5 +1,5 @@
+import { Link } from "@/lib/i18n";
 import { MenuIcon, PanelsTopLeft } from "lucide-react";
-import Link from "next/link";
 
 import { Menu } from "@/components/boilerplate/Menu";
 import { Button } from "@/components/ui/button";
@@ -10,7 +10,10 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-export function SheetMenu() {
+interface SheetMenuProps {
+  title: string;
+}
+export function SheetMenu({ title }: SheetMenuProps) {
   return (
     <Sheet>
       <SheetTrigger className="lg:hidden" asChild>
@@ -27,7 +30,7 @@ export function SheetMenu() {
           >
             <Link href="/dashboard" className="flex items-center gap-2">
               <PanelsTopLeft className="w-6 h-6 mr-1" />
-              <h1 className="font-bold text-lg">Brand Sheet</h1>
+              <h1 className="font-bold text-lg">{title}</h1>
             </Link>
           </Button>
         </SheetHeader>

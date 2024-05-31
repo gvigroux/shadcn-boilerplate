@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 import { userLoginSchema, userLoginType } from "@/lib/validation-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signIn } from "next-auth/react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { Link } from "@/lib/i18n";
+import { useRouter } from "@/lib/i18n";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 export default function LoginForm() {

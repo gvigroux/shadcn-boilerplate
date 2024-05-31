@@ -1,7 +1,7 @@
 "use client";
 
 import { LayoutGrid, LogOut, User } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/lib/i18n";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
