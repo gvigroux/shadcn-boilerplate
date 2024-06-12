@@ -35,6 +35,7 @@ export function FormNewPassword() {
 
     //TODO FieldErrors not managed
 
+    /*
     if (result.error) {
       reset();
       try {
@@ -46,7 +47,7 @@ export function FormNewPassword() {
     }
     if (result?.success) {
       setSuccess(result?.success);
-    }
+    }*/
   };
   //
   return (
