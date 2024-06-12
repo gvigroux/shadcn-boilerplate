@@ -1,4 +1,4 @@
-import SessionProvider from "@/components/boilerplate/sessionProvider";
+import SessionProvider from "@/components/boilerplate/session-provider";
 import { getAuthSession } from "@/lib/auth";
 import { languageTag } from "@/paraglide/runtime.js";
 import { LanguageProvider } from "@inlang/paraglide-next";
