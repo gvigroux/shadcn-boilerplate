@@ -1,4 +1,4 @@
-import { FormContact } from "@/components/boilerplate/form-contact";
+import { FormContact } from "@/components/boilerplate/dashboard/form-contact";
 
 export default function ContactPage() {
   return (

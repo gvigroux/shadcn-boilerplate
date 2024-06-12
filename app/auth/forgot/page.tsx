@@ -1,5 +1,5 @@
-import { CardWrapper } from "@/components/boilerplate/card-wrapper";
-import { FormPasswordReset } from "@/components/boilerplate/form-password-reset";
+import { CardWrapper } from "@/components/boilerplate/dashboard/card-wrapper";
+import { FormPasswordReset } from "@/components/boilerplate/dashboard/form-password-reset";
 
 export default function ForgotPage() {
   return (

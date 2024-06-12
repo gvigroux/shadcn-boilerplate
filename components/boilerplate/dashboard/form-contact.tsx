@@ -4,7 +4,7 @@ import { contactSchema, contactType } from "@/lib/validation-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import {
   Form,
   FormControl,
@@ -13,8 +13,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "../ui/form";
-import { Textarea } from "../ui/textarea";
+} from "../../ui/form";
+import { Textarea } from "../../ui/textarea";
 import { InputWithError } from "./InputWithError";
 
 export function FormContact() {

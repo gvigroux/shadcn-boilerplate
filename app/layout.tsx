@@ -1,7 +1,7 @@
-import { LanguageProvider } from "@inlang/paraglide-next"
-import { languageTag } from "@/paraglide/runtime.js"
-import SessionProvider from "@/components/boilerplate/SessionProvider";
+import SessionProvider from "@/components/boilerplate/sessionProvider";
 import { getAuthSession } from "@/lib/auth";
+import { languageTag } from "@/paraglide/runtime.js";
+import { LanguageProvider } from "@inlang/paraglide-next";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
@@ -20,19 +20,17 @@ export default async function RootLayout({
 }>) {
   const session = await getAuthSession();
 
-  //await sendVerificationEmail();
-
   return (
     <LanguageProvider>
-   <html lang={languageTag()} suppressHydrationWarning>
-      <body className={GeistSans.className}>
-        <SessionProvider session={session}>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            {children}
-          </ThemeProvider>
-        </SessionProvider>
-      </body>
-    </html>
- </LanguageProvider>
+      <html lang={languageTag()} suppressHydrationWarning>
+        <body className={GeistSans.className}>
+          <SessionProvider session={session}>
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+              {children}
+            </ThemeProvider>
+          </SessionProvider>
+        </body>
+      </html>
+    </LanguageProvider>
   );
 }

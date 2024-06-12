@@ -1,5 +1,7 @@
+import * as m from "@/paraglide/messages.js";
 import {
   Bookmark,
+  Globe,
   LayoutGrid,
   Settings,
   SquarePen,
@@ -36,6 +38,18 @@ export function getMenuList(pathname: string): Group[] {
           label: "Dashboard",
           active: pathname.includes("/dashboard"),
           icon: LayoutGrid,
+          submenus: [],
+        },
+      ],
+    },
+    {
+      groupLabel: "Contents",
+      menus: [
+        {
+          href: m.path_domain(),
+          label: m.menu_domain(),
+          active: pathname.includes(m.path_domain()),
+          icon: Globe,
           submenus: [],
         },
       ],

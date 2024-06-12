@@ -1,7 +1,7 @@
 "use client";
 
-import { Footer } from "@/components/boilerplate/Footer";
-import { Sidebar } from "@/components/boilerplate/sidebar";
+import { Footer } from "@/components/boilerplate/dashboard/Footer";
+import { Sidebar } from "@/components/boilerplate/dashboard/sidebar";
 import { useSidebarToggle } from "@/hooks/use-sidebar-toggle";
 import { useStore } from "@/hooks/use-store";
 import { cn } from "@/lib/utils";

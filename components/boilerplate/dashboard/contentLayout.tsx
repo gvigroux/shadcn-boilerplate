@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/boilerplate/navbar";
+import { Navbar } from "@/components/boilerplate/dashboard/navbar";
 
 interface ContentLayoutProps {
   title: string;

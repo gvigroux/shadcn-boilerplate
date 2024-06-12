@@ -1,7 +1,7 @@
 "use client";
 import { createUser } from "@/actions/auth";
-import { InputWithError } from "@/components/boilerplate/InputWithError";
-import { CardWrapper } from "@/components/boilerplate/card-wrapper";
+import { InputWithError } from "@/components/boilerplate/dashboard/InputWithError";
+import { CardWrapper } from "@/components/boilerplate/dashboard/card-wrapper";
 import { Button } from "@/components/ui/button";
 import {
   userRegistrationSchema,

@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Link } from "@/lib/i18n";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { Social } from "./social";
 
 interface CardWrapperProps {

@@ -1,7 +1,7 @@
 import { Link } from "@/lib/i18n";
 import * as m from "@/paraglide/messages.js";
 
-import { ContentLayout } from "@/components/boilerplate/contentLayout";
+import { ContentLayout } from "@/components/boilerplate/dashboard/contentLayout";
 import {
   Breadcrumb,
   BreadcrumbItem,

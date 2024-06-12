@@ -13,14 +13,14 @@ import {
 } from "@/components/ui/sheet";
 import { useState } from "react";
 
+import { UserNav } from "@/components/boilerplate/dashboard/user-nav";
+import { ModeToggle } from "@/components/boilerplate/mode-toggle";
+import { ThemeImage } from "@/components/boilerplate/theme-image";
 import { buttonVariants } from "@/components/ui/button";
 import { Link } from "@/lib/i18n";
 import * as m from "@/paraglide/messages.js";
 import { Menu } from "lucide-react";
 import { useSession } from "next-auth/react";
-import { ModeToggle } from "../mode-toggle";
-import { ThemeImage } from "../theme-image";
-import { UserNav } from "../user-nav";
 
 interface RouteProps {
   href: string;
@@ -66,7 +66,7 @@ export const Navbar = () => {
                 width={28}
                 height={28}
                 alt="logo"
-                className="hidden mr-2"
+                className="mr-2"
               />
               {m.title()}
             </a>

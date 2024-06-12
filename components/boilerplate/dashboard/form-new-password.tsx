@@ -1,19 +1,19 @@
 "use client";
 
-import { sendResetPasswordEmail } from "@/actions/auth";
+import { resetPassword } from "@/actions/auth";
 import {
-  forgotPasswordSchema,
-  forgotPasswordType,
+  resetPasswordSchema,
+  resetPasswordType,
 } from "@/lib/validation-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { InputWithError } from "./InputWithError";
 import { FormSuccess } from "./form-success";
 
-export function FormPasswordReset() {
+export function FormNewPassword() {
   const [success, setSuccess] = useState<string | undefined>();
   const searchParams = useSearchParams();
   const token = searchParams.get("token");
@@ -22,17 +22,21 @@ export function FormPasswordReset() {
     register,
     handleSubmit,
     setError,
-    formState: { errors, isSubmitting },
-  } = useForm<forgotPasswordType>({
-    resolver: zodResolver(forgotPasswordSchema),
+    reset,
+    formState: { errors, isSubmitting, isSubmitted },
+  } = useForm<resetPasswordType>({
+    resolver: zodResolver(resetPasswordSchema),
   });
 
-  const onSubmit: SubmitHandler<forgotPasswordType> = async (data) => {
+  const onSubmit: SubmitHandler<resetPasswordType> = async (data) => {
     setSuccess(undefined);
     setError("root", { message: undefined });
-    const result = await sendResetPasswordEmail(data);
+    const result = await resetPassword(data);
 
-    if (result?.error) {
+    //TODO FieldErrors not managed
+
+    if (result.error) {
+      reset();
       try {
         const json = JSON.parse(result.error);
         setError(json.field, { message: json.message });
@@ -44,29 +48,35 @@ export function FormPasswordReset() {
       setSuccess(result?.success);
     }
   };
-
+  //
   return (
     <form onSubmit={handleSubmit(onSubmit)} autoComplete="on">
       <div className="grid gap-4">
         <div className="grid gap-2">
           <InputWithError
-            id="email"
-            label="Email"
-            type="email"
-            placeholder="m@example.com"
+            id="password"
+            label="New password"
+            type="password"
+            placeholder="********"
             register={register}
             errors={errors}
-            autoComplete="on"
           />
         </div>
+        <input
+          {...register("token")}
+          name="token"
+          id="token"
+          type="hidden"
+          value={token || ""}
+        />
         {errors.root?.message && (
           <span className="pt-0 mt-0 text-sm text-red-500">
             {errors.root.message}
           </span>
         )}
         <FormSuccess message={success} />
-        <Button type="submit" className="w-full" disabled={isSubmitting}>
-          Send reset email
+        <Button type="submit" className="w-full" disabled={isSubmitted}>
+          Reset password
         </Button>
       </div>
     </form>

@@ -8,22 +8,25 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { pricingListTest as pricingList } from "@/data/pricing";
 import { Check } from "lucide-react";
 
-enum PopularPlanType {
+export enum PopularPlanType {
   NO = 0,
   YES = 1,
 }
 
-interface PricingProps {
+export interface PricingProps {
   title: string;
   popular: PopularPlanType;
   price: number;
+  priceDetail?: string;
   description: string;
   buttonText: string;
   benefitList: string[];
 }
 
+/*
 const pricingList: PricingProps[] = [
   {
     title: "Free",
@@ -71,8 +74,9 @@ const pricingList: PricingProps[] = [
     ],
   },
 ];
+*/
 
-export const Pricing = () => {
+export const Pricing = (/*pricingList: PricingProps[]*/) => {
   return (
     <section id="pricing" className="container py-24 sm:py-32">
       <h2 className="text-3xl md:text-4xl font-bold text-center">
@@ -108,7 +112,10 @@ export const Pricing = () => {
               </CardTitle>
               <div>
                 <span className="text-3xl font-bold">${pricing.price}</span>
-                <span className="text-muted-foreground"> /month</span>
+                <span className="text-muted-foreground">
+                  {" "}
+                  {pricing.priceDetail}
+                </span>
               </div>
 
               <CardDescription>{pricing.description}</CardDescription>

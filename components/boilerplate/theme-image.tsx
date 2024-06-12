@@ -7,19 +7,21 @@ type Props = Omit<ImageProps, "src" | "priority" | "loading"> & {
 };
 
 export const ThemeImage = (props: Props) => {
-  const { srcLight, srcDark, className, ...rest } = props;
+  const { srcLight, srcDark, className, alt, ...rest } = props;
 
   return (
     <>
       <Image
         {...rest}
         src={srcLight}
+        alt={alt}
         className={cn("hidden dark:block", className)}
       />
       <Image
         {...rest}
         src={srcDark}
-        className={cn("block dark:hidden", className)}
+        alt={alt}
+        className={cn("dark:hidden block", className)}
       />
     </>
   );

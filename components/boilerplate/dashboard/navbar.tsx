@@ -1,6 +1,6 @@
+import { SheetMenu } from "@/components/boilerplate/dashboard/sheetMenu";
+import { UserNav } from "@/components/boilerplate/dashboard/user-nav";
 import { ModeToggle } from "@/components/boilerplate/mode-toggle";
-import { SheetMenu } from "@/components/boilerplate/sheetMenu";
-import { UserNav } from "@/components/boilerplate/user-nav";
 
 interface NavbarProps {
   title: string;

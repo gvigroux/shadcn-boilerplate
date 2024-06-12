@@ -1,10 +1,9 @@
 "use client";
 
+import { Link, usePathname } from "@/lib/i18n";
 import { Ellipsis, LogOut } from "lucide-react";
-import { Link } from "@/lib/i18n";
-import { usePathname } from "@/lib/i18n";
 
-import { CollapseMenuButton } from "@/components/boilerplate/CollapseMenuButton";
+import { CollapseMenuButton } from "@/components/boilerplate/dashboard/CollapseMenuButton";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {
@@ -13,7 +12,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { getMenuList } from "@/lib/menu-list";
+import { getMenuList } from "@/data/menu-list";
 import { cn } from "@/lib/utils";
 import { signOut } from "next-auth/react";
 
@@ -104,6 +103,7 @@ export function Menu({ isOpen }: MenuProps) {
               )}
             </li>
           ))}
+
           <li className="w-full grow flex items-end">
             <TooltipProvider disableHoverableContent>
               <Tooltip delayDuration={100}>

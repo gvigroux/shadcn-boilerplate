@@ -1,5 +1,5 @@
-import { CardWrapper } from "@/components/boilerplate/card-wrapper";
-import { EmailVerification } from "@/components/boilerplate/form-email-verification";
+import { CardWrapper } from "@/components/boilerplate/dashboard/card-wrapper";
+import { EmailVerification } from "@/components/boilerplate/dashboard/form-email-verification";
 
 export default async function verificationPage() {
   return (

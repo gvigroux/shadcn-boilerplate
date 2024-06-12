@@ -1,13 +1,12 @@
 "use client";
 
-import { InputWithError } from "@/components/boilerplate/InputWithError";
-import { CardWrapper } from "@/components/boilerplate/card-wrapper";
+import { InputWithError } from "@/components/boilerplate/dashboard/InputWithError";
+import { CardWrapper } from "@/components/boilerplate/dashboard/card-wrapper";
 import { Button } from "@/components/ui/button";
+import { Link, useRouter } from "@/lib/i18n";
 import { userLoginSchema, userLoginType } from "@/lib/validation-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signIn } from "next-auth/react";
-import { Link } from "@/lib/i18n";
-import { useRouter } from "@/lib/i18n";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 export default function LoginForm() {

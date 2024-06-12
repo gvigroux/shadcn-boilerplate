@@ -3,6 +3,43 @@
   "title": "Cookie Consent",
   "landing_description": "landing_description",
 
+  "menu_domain": "Domain",
+  "path_domain": "/dashboard/domain",
+
+  "menu_dashboard": "dashboard",
+  "path_dashboard": "/dashboard",
+
+  "pricing_currency": "free",
+  "pricing_title": "free",
+  "pricing_description": "free",
+
+  "plan1_title": "Free",
+  "plan1_price_detail": "&nbsp;",
+  "plan1_price_description": "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
+  "plan1_button_text": "One domain",
+  "plan1_benefit_1": "One domain",
+  "plan1_benefit_2": "No access limit",
+  "plan1_benefit_3": "X languages supported",
+  "plan1_benefit_4": "All customizations",
+
+  "plan2_title": "free",
+  "plan2_price_detail": "&nbsp;",
+  "plan2_price_description": "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
+  "plan2_button_text": "One domain",
+  "plan2_benefit_1": "4 Team member",
+  "plan2_benefit_2": "4 GB Storage",
+  "plan2_benefit_3": "Priority support",
+  "plan2_benefit_4": "Upto 6 pages",
+
+  "plan3_title": "free",
+  "plan3_price_detail": "&nbsp;",
+  "plan3_price_description": "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
+  "plan3_button_text": "One domain",
+  "plan3_benefit_1": "10 Team member",
+  "plan3_benefit_2": "8 GB Storage",
+  "plan3_benefit_3": "Upto 10 pages",
+  "plan3_benefit_4": "Priority support",
+
   "about": "About",
   "home": "Home",
   "about_path": "/about",

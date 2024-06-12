@@ -1,5 +1,5 @@
-import { CardWrapper } from "@/components/boilerplate/card-wrapper";
-import { FormNewPassword } from "@/components/boilerplate/form-new-password";
+import { CardWrapper } from "@/components/boilerplate/dashboard/card-wrapper";
+import { FormNewPassword } from "@/components/boilerplate/dashboard/form-new-password";
 
 export default function NewPasswordPage() {
   return (
